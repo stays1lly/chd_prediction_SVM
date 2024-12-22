@@ -1,0 +1,50 @@
+<!-- flask_app/templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Heart Disease Prediction</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Heart Disease Prediction</h1>
+      <form action="/predict" method="post">
+        <label for="sbp">SBP:</label>
+        <input type="text" id="sbp" name="sbp" required />
+
+        <label for="tobacco">Tobacco:</label>
+        <input type="text" id="tobacco" name="tobacco" required />
+
+        <label for="ldl">LDL:</label>
+        <input type="text" id="ldl" name="ldl" required />
+
+        <label for="adiposity">Adiposity:</label>
+        <input type="text" id="adiposity" name="adiposity" required />
+
+        <label for="famhist"
+          >Family History (0 for Absent, 1 for Present):</label
+        >
+        <input type="text" id="famhist" name="famhist" required />
+
+        <label for="type">Type:</label>
+        <input type="text" id="type" name="type" required />
+
+        <label for="obesity">Obesity:</label>
+        <input type="text" id="obesity" name="obesity" required />
+
+        <label for="alcohol">Alcohol:</label>
+        <input type="text" id="alcohol" name="alcohol" required />
+
+        <label for="age">Age:</label>
+        <input type="text" id="age" name="age" required />
+
+        <button type="submit">Predict</button>
+      </form>
+    </div>
+  </body>
+</html>
